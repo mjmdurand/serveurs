@@ -42,7 +42,7 @@ echo ""
 
 # install nginx, php, certbot, redis, mariaDB, ufw, unzip, fail2ban, portsentry
 echo -e "\e[1;34mInstalling NGINX web server.\e[0m"
-sudo apt-get -y -q install nginx php-fpm php-cli php-json php-curl php-imap php-gd php-mysql php-xml php-zip php-intl php-imagick php-mbstring php-bcmath php-gmp software-properties-common certbot python3-certbot-nginx php8.0-apcu redis-server php8.0-redis mariadb-server mariadb-client ufw portsentry unzip fail2ban
+sudo apt-get -y -q install nginx php-fpm php-cli php-json php-curl php-imap php-gd php-mysql php-xml php-zip php-intl php-imagick php-mbstring php-bcmath php-gmp software-properties-common certbot python3-certbot-nginx php-apcu redis-server php-redis mariadb-server mariadb-client ufw portsentry unzip fail2ban
 echo -e "\e[1;32mInstallation done.\e[0m"
 echo ""
 
