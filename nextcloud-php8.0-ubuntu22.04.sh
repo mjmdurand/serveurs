@@ -1,13 +1,16 @@
 #!/bin/bash -e
 
 HOME_DIR=~
+IPCONF=/etc/netplan/static.yaml
 
 #moving to user's directory
 cd ${HOME_DIR}
 
+if [ ! -f "$IPCONF" ]; then
+
 #Static IPv4
 read -p "Type STATIC IPv4 (xx.xx.xx.xx/yy): " staticip
-read -p "Type GATEWAY ip : " gateway
+read -p "Type GATEWAY ip : " ¨gateway
 read -p "Type DNS ip separated with a comma (xx.xx.xx.xx, yy.yy.yy.yy)  : " dnsservers
 echo '
 network:
@@ -25,10 +28,11 @@ network:
       routes:
         - to: '${gateway}'/32
           via: 0.0.0.0
-          scope: link' > /etc/netplan/static.yaml
+          scope: link' > $IPCONF
 
 sudo mv /etc/netplan/00-installer-config.yaml /etc/netplan/00-installer-config.yaml.old
 sudo netplan apply
+fi
 
 # update system 
 echo -e "\e[1;34mUpdating the system.\e[0m"
