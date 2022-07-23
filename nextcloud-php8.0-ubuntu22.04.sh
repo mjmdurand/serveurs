@@ -18,7 +18,7 @@ if [ ! -f "$IPCONF" ]; then
 
 #Static IPv4
 read -p "Type STATIC IPv4 (xx.xx.xx.xx/yy): " staticip
-read -p "Type GATEWAY ip : " ¨gateway
+read -p "Type GATEWAY ip : " gateway
 read -p "Type DNS ip separated with a comma (xx.xx.xx.xx, yy.yy.yy.yy)  : " dnsservers
 echo '
 network:
