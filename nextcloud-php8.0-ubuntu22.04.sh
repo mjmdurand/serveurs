@@ -40,6 +40,9 @@ network:
 
 mv /etc/netplan/00-installer-config.yaml /etc/netplan/00-installer-config.yaml.old
 netplan apply
+echo "System is gonna reboot to apply new network configuration"
+sleep 10
+reboot
 fi
 
 # update system 
